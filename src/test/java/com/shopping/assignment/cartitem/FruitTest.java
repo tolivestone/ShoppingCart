@@ -1,7 +1,6 @@
 package com.shopping.assignment.cartitem;
 
 import com.shopping.assignment.Constants;
-import com.shopping.assignment.cartitem.Fruit;
 import com.shopping.assignment.cartvisitor.ShoppingCartVisitor;
 import junit.framework.TestCase;
 import org.junit.Test;
@@ -16,7 +15,6 @@ import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class FruitTest extends TestCase {
-
 
 
     @Mock

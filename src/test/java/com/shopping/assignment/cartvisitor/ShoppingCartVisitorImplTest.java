@@ -2,8 +2,6 @@ package com.shopping.assignment.cartvisitor;
 
 import com.shopping.assignment.Constants;
 import com.shopping.assignment.cartitem.Fruit;
-import com.shopping.assignment.cartvisitor.ShoppingCartVisitor;
-import com.shopping.assignment.cartvisitor.ShoppingCartVisitorImpl;
 import junit.framework.TestCase;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,12 +16,12 @@ public class ShoppingCartVisitorImplTest extends TestCase {
     public void testVisit() {
         ShoppingCartVisitor testObj = new ShoppingCartVisitorImpl();
 
-        Fruit orange = new Fruit(BigDecimal.ONE, Constants.TWO,Constants.ORANGE);
-        BigDecimal actualRetVal  = testObj.visit(orange);
+        Fruit orange = new Fruit(BigDecimal.ONE, Constants.TWO, Constants.ORANGE);
+        BigDecimal actualRetVal = testObj.visit(orange);
         assertEquals(actualRetVal, BigDecimal.valueOf(2));
 
-        Fruit apple = new Fruit(BigDecimal.TEN,Constants.TWO,Constants.APPLE);
-        actualRetVal  = testObj.visit(apple);
+        Fruit apple = new Fruit(BigDecimal.TEN, Constants.TWO, Constants.APPLE);
+        actualRetVal = testObj.visit(apple);
         assertEquals(actualRetVal, BigDecimal.valueOf(20));
     }
 

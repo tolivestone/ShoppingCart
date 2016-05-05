@@ -1,19 +1,19 @@
 package com.shopping.assignment.cartcostcalculator;
 
 import com.shopping.assignment.Constants;
-import com.shopping.assignment.cartcostcalculator.ShoppingCartCostCalculatorImpl;
 import com.shopping.assignment.cartitem.Fruit;
 import com.shopping.assignment.cartitem.Item;
-import com.shopping.assignment.cartcostcalculator.ShoppingCartCostCalculator;
 import com.shopping.assignment.cartvisitor.ShoppingCartVisitor;
 import junit.framework.TestCase;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -39,7 +39,7 @@ public class ShoppingCartCostCalculatorImplTest extends TestCase {
 
         BigDecimal actualTotal = testObj.calculateCost(fruits);
 
-        assertEquals(BigDecimal.valueOf(21.0f),actualTotal);
+        assertEquals(BigDecimal.valueOf(21.0f), actualTotal);
         verify(shoppingCartVisitor, times(Constants.NUMBER_OF_INVOCATIONS_ONE)).visit(orange);
         verify(shoppingCartVisitor, times(Constants.NUMBER_OF_INVOCATIONS_ONE)).visit(apple);
     }
