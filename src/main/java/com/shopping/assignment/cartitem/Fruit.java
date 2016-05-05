@@ -15,7 +15,7 @@ public class Fruit implements Item {
         Validate.notNull(pricePerKg);
         Validate.notNull(name);
         Validate.notEmpty(name);
-        assert(weight > 0);
+        assert (weight > 0);
 
         this.pricePerKg = pricePerKg;
         this.weight = weight;
